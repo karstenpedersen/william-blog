@@ -3,12 +3,12 @@
 	import Logo from './Logo.svelte';
 </script>
 
-<footer class="bg-zinc-900 text-white p-3">
-	<div class="wrapper">
+<footer class="bg-dark text-light p-3">
+	<div class="wrapper p-3">
 		<div class="flex justify-between items-center">
 			<h2><Logo /></h2>
 			<button
-				class="bg-white hover:bg-green-900 p-1 shadow-md hover:text-white transition-all aspect-square rounded-md w-[2rem] text-zinc-900"
+				class="bg-light hover:bg-primary p-1 shadow-md hover:text-light transition-all aspect-square rounded-md w-[2rem] text-dark"
 			>
 				<ChevronCircleUp />
 			</button>
@@ -39,6 +39,6 @@
 
 <style>
 	h3 {
-		@apply text-zinc-500 mb-2;
+		@apply text-dark-gray mb-2;
 	}
 </style>

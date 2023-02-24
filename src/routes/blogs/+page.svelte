@@ -6,8 +6,8 @@
 	export let { posts, hello } = data;
 </script>
 
-<Section padding={false} class="bg-zinc-300 p-3">
-	<form action="" class="wrapper flex gap-4 bg-white overflow-hidden pr-3 rounded-md">
+<Section padding={false} class="bg-light-gray p-3">
+	<form action="" class="wrapper flex gap-4 bg-light overflow-hidden pr-3 rounded-md">
 		<input
 			type="text"
 			name=""

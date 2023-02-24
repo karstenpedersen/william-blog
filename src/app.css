@@ -4,10 +4,29 @@
 
 @layer base {
 	:root {
+		--primary: 144deg 61% 20%;
+		--primary-variant: 143deg 64% 24%;
+		--secondary: 43deg 96% 56%;
+		--light: 0deg 0% 98%;
+		--dark: 240deg 6% 10%;
+		--light-gray: 240deg 5% 84%;
+		--dark-gray: 240deg 4% 46%;
+
+		--light-fg: var(--dark);
+		--light-fg-variant: var(--light-gray);
+
+		--primary-fg: var(--light);
+		--primary-fg-variant: var(--light-gray);
+
+		--secondary-fg: var(--light);
+		--secondary-fg-variant: var(--light-gray);
+
+		--dark-fg: var(--light);
+		--dark-fg-variant: var(--dark-gray);
 	}
 
 	body {
-		@apply text-zinc-900;
+		@apply text-dark bg-light;
 	}
 
 	h1,
@@ -32,7 +51,7 @@
 	}
 
 	.link {
-		@apply hover:text-green-500 hover:underline;
+		@apply hover:text-primary hover:underline;
 	}
 }
 

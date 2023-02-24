@@ -6,7 +6,7 @@
 	export let { posts, hello } = data;
 </script>
 
-<Section padding={false} class="hero relative bg-zinc-300 text-white h-[18rem] overflow-hidden">
+<Section padding={false} class="hero relative text-light h-[18rem] overflow-hidden">
 	<!-- Image background -->
 	<img
 		src="/images/blogs/leverpostej/thumbnail.jpg"

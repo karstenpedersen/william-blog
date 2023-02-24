@@ -7,9 +7,9 @@
 	};
 </script>
 
-<article class="shadow-md rounded-lg overflow-hidden">
+<article class="shadow-md rounded-lg overflow-hidden min-h-[350px]">
 	<a href={blog.path}>
-		<img src={blog.thumbnail} alt="" class="rounded-lg" />
+		<img src={blog.thumbnail} alt="" />
 	</a>
 	<div class="p-3">
 		<h3><a href={blog.path}>{blog.title}</a></h3>

@@ -1,14 +1,20 @@
 <script lang="ts">
+	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
 	import Logo from './Logo.svelte';
 	import NavLink from './NavLink.svelte';
+	import SearchBar from './SearchBar.svelte';
 	const navLinks = [
 		{ title: 'Min blog', path: '/blogs' },
 		{ title: 'Om mig', path: '/om' }
 	];
 </script>
 
-<header class="flex bg-green-900 shadow-md text-white justify-between items-center p-3">
-	<Logo />
+<header class="flex bg-primary shadow-md text-light justify-between items-center p-3">
+	<div class="flex gap-6 items-center">
+		<Logo />
+
+		<SearchBar />
+	</div>
 
 	<div class="flex gap-5 items-center">
 		<nav>
@@ -22,9 +28,9 @@
 		</nav>
 		<a
 			href="mailto:karstenfp.all@gmail.com"
-			class="font-semibold hover:bg-white hover:text-green-900 transition-all bg-zinc-900 px-2 py-1 rounded-md"
+			class="font-semibold transition-colors py-1 rounded-full w-[24px] hover:text-secondary"
 		>
-			Kontakt
+			<FaEnvelope />
 		</a>
 	</div>
 </header>
