@@ -3,7 +3,7 @@
 	import Section from '$lib/components/Section.svelte';
 
 	export let data;
-	export let { posts, hello } = data;
+	export let { posts } = data;
 </script>
 
 <Section wrapper={false} padding={false} class="hero relative h-[18rem] overflow-hidden text-light">
@@ -46,10 +46,8 @@
 	</p>
 
 	<div class="mt-6 grid grid-cols-3 gap-4">
-		{#each posts as post}
-			<BlogCard />
-			<BlogCard />
-			<BlogCard />
+		{#each posts as blog}
+			<BlogCard {blog} />
 		{/each}
 	</div>
 </Section>

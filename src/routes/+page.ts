@@ -1,13 +1,9 @@
 /** @type {import('./$types').PageLoad} */
-export async function load() {
-	const allPostFiles = await import.meta.glob('./blogs/blog/*/*.{svx,md}');
-	console.log(allPostFiles);
-	const allPosts = await Object.entries(allPostFiles).map(([path, post]) => {
-		const postPath = path.slice(2, -9);
+export const load = async ({ fetch }) => {
+	const response = await fetch(`/api/blogs`);
+	const posts = await response.json();
 
-		return { title: postPath, path: postPath };
-	});
-	const posts = await allPosts;
-	console.log(posts);
-	return { posts, hello: 'Hello World' };
-}
+	return {
+		posts
+	};
+};
