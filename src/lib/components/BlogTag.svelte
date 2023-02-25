@@ -4,7 +4,7 @@
 
 <a
 	href="/"
-	class="bg-primary hover:bg-light transition-colors hover:text-primary rounded px-2 py-1"
+	class="rounded bg-primary px-2 py-1 transition-colors hover:bg-light hover:text-primary"
 >
 	#{title}
 </a>

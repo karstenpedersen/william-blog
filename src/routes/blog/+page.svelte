@@ -3,17 +3,17 @@
 	import Section from '$lib/components/Section.svelte';
 
 	export let data;
-	export let { posts, hello } = data;
+	export let { posts } = data;
 </script>
 
 <Section padding={false} class="bg-light-gray p-3">
-	<form action="" class="wrapper flex gap-4 bg-light overflow-hidden pr-3 rounded-md">
+	<form action="" class="wrapper flex gap-4 overflow-hidden rounded-md bg-light pr-3">
 		<input
 			type="text"
 			name=""
 			id=""
 			placeholder="Søg efter blogs"
-			class="bg-transparent flex-1 p-1 px-3"
+			class="flex-1 bg-transparent p-1 px-3"
 		/>
 		<button>Søg</button>
 	</form>
@@ -21,8 +21,8 @@
 
 <Section class="wrapper">
 	<div class="grid grid-cols-3 gap-4">
-		{#each posts as post}
-			<BlogCard />
+		{#each posts as blog}
+			<BlogCard {blog} />
 		{/each}
 	</div>
 </Section>

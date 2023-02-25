@@ -11,14 +11,14 @@
 		</p>
 	</div>
 
-	<img src="/images/me.jpg" alt="" class="w-full rounded-md h-full object-cover" />
+	<img src="/images/me.jpg" alt="" class="h-full w-full rounded-md object-cover" />
 </Section>
 
 <Section class="splitter">
 	<img
 		src="/images/blogs/leverpostej/thumbnail.jpg"
 		alt=""
-		class="w-full rounded-md h-full object-cover"
+		class="h-full w-full rounded-md object-cover"
 	/>
 
 	<div>

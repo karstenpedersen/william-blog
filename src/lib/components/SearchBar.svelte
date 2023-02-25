@@ -3,16 +3,23 @@
 </script>
 
 <form
-	action=""
-	class="bg-light group bg-opacity-0 text-light focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline focus-within:outline-secondary focus-within:text-dark focus-within:bg-opacity-100 transition-all p-2 flex items-center rounded-full"
+	class="group relative flex h-[2.5rem] w-[2.5rem] overflow-hidden rounded-full bg-transparent transition-all duration-300 focus-within:w-full focus-within:bg-light focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-secondary "
 >
+	<!-- Input -->
 	<input
 		type="text"
 		placeholder="Søg"
-		class="w-0 group-focus-within:w-full duration-300 transition-all active:w-full group-focus:w-full outline-none bg-transparent"
+		class="absolute h-full w-[2.5rem] cursor-pointer bg-transparent px-3 text-lg text-dark opacity-0 outline-none group-focus-within:w-[calc(100%-2.5rem)] group-focus-within:cursor-text group-focus-within:opacity-100"
+		aria-label="search for blogs"
 	/>
 
-	<button class="outline-none w-[22px]">
-		<FaSearch />
+	<!-- Search Button -->
+	<button
+		class="ml-auto grid aspect-square h-full place-items-center outline-none transition-colors focus:bg-secondary focus:!text-secondary-fg group-focus-within:text-dark"
+		aria-label="submit search"
+	>
+		<div class="w-[24px]">
+			<FaSearch />
+		</div>
 	</button>
 </form>

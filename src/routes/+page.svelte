@@ -6,44 +6,46 @@
 	export let { posts, hello } = data;
 </script>
 
-<Section padding={false} class="hero relative text-light h-[18rem] overflow-hidden">
+<Section wrapper={false} padding={false} class="hero relative h-[18rem] overflow-hidden text-light">
 	<!-- Image background -->
 	<img
 		src="/images/blogs/leverpostej/thumbnail.jpg"
 		alt=""
-		class="w-full h-full brightness-[0.3] object-cover"
+		class="h-full w-full object-cover brightness-[0.3]"
 	/>
 
 	<!-- Content -->
-	<div class="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col">
+	<div class="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center">
 		<h1 class="text-5xl">Min seje hjemmeside</h1>
 	</div>
 </Section>
 
-<Section class="splitter">
-	<img
-		src="/images/blogs/leverpostej/thumbnail.jpg"
-		alt=""
-		class="w-full rounded-md h-full object-cover"
-	/>
+<Section>
+	<div class="splitter">
+		<img
+			src="/images/blogs/leverpostej/thumbnail.jpg"
+			alt=""
+			class="h-full w-full rounded-md object-cover"
+		/>
 
-	<div>
-		<h2>Hej og velkommen til min blog</h2>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi a ad hic, numquam
-			placeat nemo possimus aliquid earum molestiae.
-		</p>
+		<div>
+			<h2>Hej og velkommen til min blog</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi a ad hic, numquam
+				placeat nemo possimus aliquid earum molestiae.
+			</p>
+		</div>
 	</div>
 </Section>
 
-<Section class="wrapper">
+<Section>
 	<h2>Nye opslag</h2>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi a ad hic, numquam
 		placeat nemo possimus aliquid earum molestiae.
 	</p>
 
-	<div class="grid grid-cols-3 gap-4 mt-6">
+	<div class="mt-6 grid grid-cols-3 gap-4">
 		{#each posts as post}
 			<BlogCard />
 			<BlogCard />
@@ -52,15 +54,17 @@
 	</div>
 </Section>
 
-<Section class="splitter">
-	<div>
-		<h2>Om bloggen</h2>
-		<p>Hey bloggen</p>
-	</div>
+<Section>
+	<div class="splitter">
+		<div>
+			<h2>Om bloggen</h2>
+			<p>Hey bloggen</p>
+		</div>
 
-	<img
-		src="/images/blogs/leverpostej/thumbnail.jpg"
-		alt=""
-		class="w-full rounded-md h-full object-cover"
-	/>
+		<img
+			src="/images/blogs/leverpostej/thumbnail.jpg"
+			alt=""
+			class="h-full w-full rounded-md object-cover"
+		/>
+	</div>
 </Section>

@@ -6,7 +6,7 @@
 
 <a
 	href={item.path}
-	class="relative font-semibold transition-all"
+	class="relative text-lg font-semibold transition-all"
 	class:current={$page.url.pathname == item.path}>{item.title}</a
 >
 

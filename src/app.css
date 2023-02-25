@@ -26,7 +26,7 @@
 	}
 
 	body {
-		@apply text-dark bg-light;
+		@apply mt-[7.5rem] overflow-x-hidden scroll-smooth bg-light text-dark transition-all duration-300 md:mt-[4.5rem];
 	}
 
 	h1,
@@ -35,7 +35,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-semibold mb-3;
+		@apply mb-3 font-semibold;
 	}
 
 	h1 {
@@ -47,7 +47,7 @@
 	}
 
 	p {
-		@apply leading-7 text-lg;
+		@apply text-lg leading-7;
 	}
 
 	.link {
@@ -56,8 +56,20 @@
 }
 
 @layer components {
-	.wrapper {
+	/* .wrapper {
 		@apply mx-auto max-w-[60rem];
+	}
+
+	.wrapper-large {
+		@apply mx-auto max-w-[70rem];
+	} */
+
+	.wrapper {
+		@apply grid w-full grid-flow-row auto-rows-max grid-cols-[minmax(0,60rem)] justify-center px-[2.5vw];
+	}
+
+	.wrapper-large {
+		@apply grid w-full grid-flow-row auto-rows-max grid-cols-[minmax(0,70rem)] justify-center px-[2.5vw];
 	}
 
 	.icon {
@@ -66,7 +78,7 @@
 	}
 
 	.splitter {
-		@apply wrapper grid grid-cols-2 gap-10;
+		@apply grid grid-cols-2 gap-10;
 	}
 }
 

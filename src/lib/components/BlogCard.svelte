@@ -1,18 +1,15 @@
 <script lang="ts">
-	let blog = {
-		thumbnail: '/images/blogs/leverpostej/thumbnail.jpg',
-		title: 'Leverpostej',
-		description: 'Cool blog',
-		path: '/blogs/blog/leverpostej'
-	};
+	import type { Blog } from '$lib/utils';
+
+	export let blog: Blog;
 </script>
 
-<article class="shadow-md rounded-lg overflow-hidden min-h-[350px]">
+<article class="min-h-[350px] overflow-hidden rounded-lg shadow-md">
 	<a href={blog.path}>
-		<img src={blog.thumbnail} alt="" />
+		<img src={blog.meta.thumbnail} alt="" />
 	</a>
 	<div class="p-3">
-		<h3><a href={blog.path}>{blog.title}</a></h3>
-		<p>{blog.description}</p>
+		<h3><a href={blog.path}>{blog.meta.title}</a></h3>
+		<p>{blog.meta.description}</p>
 	</div>
 </article>
