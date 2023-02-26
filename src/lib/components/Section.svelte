@@ -11,6 +11,6 @@
 
 <style>
 	.padding {
-		@apply p-10;
+		@apply py-10;
 	}
 </style>

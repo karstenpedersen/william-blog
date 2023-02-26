@@ -1,5 +1,7 @@
+import type { Load } from '@sveltejs/kit';
+
 // src/routes/blog/[slug]/+page.js
-export async function load({ params }: { params: { slug: string } }) {
+export const load: Load = async ({ params }) => {
 	// TODO - Change directory
 	const post = await import(`../../../data/blogs/${params.slug}.md`);
 
@@ -12,4 +14,4 @@ export async function load({ params }: { params: { slug: string } }) {
 		date,
 		meta: post.metadata
 	};
-}
+};

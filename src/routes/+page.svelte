@@ -45,7 +45,7 @@
 		placeat nemo possimus aliquid earum molestiae.
 	</p>
 
-	<div class="mt-6 grid grid-cols-3 gap-4">
+	<div class="mt-6 grid gap-4 md:grid-cols-3">
 		{#each posts as blog}
 			<BlogCard {blog} />
 		{/each}
