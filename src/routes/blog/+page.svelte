@@ -62,9 +62,7 @@
 
 		{#key display}
 			<!-- Blogs -->
-			<div
-				class="grid {display === 'grid' && 'sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'} gap-4"
-			>
+			<div class="grid {display === 'grid' && 'sm:grid-cols-2 md:grid-cols-3'} gap-4">
 				{#each visiblePosts as blog, i (blog.path)}
 					<div in:slide={{ duration: 100, delay: i * 100 }}>
 						<BlogCard {blog} {display} />

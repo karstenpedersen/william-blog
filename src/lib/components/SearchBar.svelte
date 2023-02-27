@@ -9,7 +9,8 @@
 
 <form
 	on:submit|preventDefault
-	class="focus-outline group relative flex h-[2.5rem] w-[2.5rem] overflow-hidden rounded-full transition-all duration-300 focus-within:w-full focus-within:bg-light {clazz}"
+	autocomplete="off"
+	class="focus-outline group pointer-events-auto relative flex h-[2.5rem] w-[2.5rem] overflow-hidden rounded-full transition-all duration-300 focus-within:w-full focus-within:bg-light {clazz}"
 	class:expand
 >
 	<input

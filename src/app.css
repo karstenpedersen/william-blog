@@ -26,7 +26,7 @@
 	}
 
 	body {
-		@apply mt-[4.5rem] overflow-x-hidden scroll-smooth bg-light text-dark transition-all duration-300;
+		@apply overflow-x-hidden scroll-smooth bg-light text-dark;
 	}
 
 	h1,
@@ -51,7 +51,7 @@
 	}
 
 	.link {
-		@apply hover:text-primary hover:underline;
+		@apply hover:text-secondary hover:underline;
 	}
 }
 

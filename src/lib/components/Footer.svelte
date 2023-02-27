@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ChevronCircleUp from 'svelte-icons/fa/FaArrowUp.svelte';
+	import { navLinks } from '../../data/site.data';
 	import Logo from './Logo.svelte';
 </script>
 
@@ -25,8 +26,11 @@
 		<div>
 			<h3>Links</h3>
 			<ul>
-				<li><a href="/blog" class="link">Min blog</a></li>
-				<li><a href="/om" class="link">Om mig</a></li>
+				{#each navLinks as item}
+					<li>
+						<a href={item.path} class="link">{item.title}</a>
+					</li>
+				{/each}
 			</ul>
 		</div>
 		<div class="col-span-2">

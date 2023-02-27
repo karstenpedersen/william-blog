@@ -3,8 +3,10 @@
 	import { page } from '$app/stores';
 	import FaBars from 'svelte-icons/fa/FaBars.svelte';
 	import FaFacebook from 'svelte-icons/fa/FaFacebook.svelte';
+	import FaInstagram from 'svelte-icons/fa/FaInstagram.svelte';
 	import FaTimes from 'svelte-icons/fa/FaTimes.svelte';
 	import { fly } from 'svelte/transition';
+	import { navLinks } from '../../data/site.data';
 	import Backdrop from './Backdrop.svelte';
 	import Logo from './Logo.svelte';
 	import NavLink from './NavLink.svelte';
@@ -20,11 +22,6 @@
 		return shouldHide;
 	};
 
-	const navLinks = [
-		{ title: 'Min blog', path: '/blog' },
-		{ title: 'Om mig', path: '/om' }
-	];
-
 	const toggleMobileNav = () => {
 		showMobileNav = !showMobileNav;
 	};
@@ -34,7 +31,10 @@
 <svelte:window bind:scrollY />
 
 <!-- Desktop header -->
-<header class="fixed top-0 left-0 right-0 z-[100] shadow-md transition-all" class:hide>
+<header
+	class="fixed top-0 left-0 right-0 z-[100] shadow-md transition-all focus-within:!translate-y-0"
+	class:hide
+>
 	<!-- Top -->
 	<div class="wrapper-large z-50 bg-primary text-primary-fg">
 		<div class="flex h-[4.5rem] items-center justify-between">
@@ -42,7 +42,7 @@
 			<div class="flex items-center gap-6">
 				<Logo />
 
-				<div class="hidden w-[18rem] md:block">
+				<div class="hidden w-[18rem] lg:block">
 					<SearchBar
 						on:submit={() => {
 							goto('/blog');
@@ -51,9 +51,9 @@
 				</div>
 			</div>
 
-			<div class="flex items-center gap-4">
+			<div class="hidden items-center gap-4 md:flex">
 				<!-- Navigation -->
-				<nav class="hidden md:block">
+				<nav>
 					<ul class="flex gap-4">
 						{#each navLinks as item}
 							<li>
@@ -73,6 +73,11 @@
 							<FaFacebook />
 						</a>
 					</li>
+					<li>
+						<a href="/" class="block aspect-square w-[24px]">
+							<FaInstagram />
+						</a>
+					</li>
 				</ul>
 			</div>
 
@@ -90,7 +95,7 @@
 
 	<!-- Mobile Search -->
 	<div
-		class="wrapper-large absolute bottom-0 left-0 -z-10 h-[4rem] translate-y-[4rem] place-content-center bg-primary-variant text-primary-fg shadow-md transition-all duration-500 focus-within:!bg-opacity-100 md:-translate-y-[4rem]"
+		class="wrapper-large group absolute bottom-0 left-0 -z-10 h-[4rem] translate-y-full place-content-center bg-primary-variant text-primary-fg shadow-md transition-all duration-500 focus-within:!bg-opacity-100 lg:-translate-y-[4rem]"
 		class:hideOnBlog={$page.url.pathname === '/blog'}
 		class:hideMobileSearch={hide}
 	>
@@ -139,10 +144,10 @@
 	}
 
 	.hideMobileSearch {
-		@apply bg-opacity-0 shadow-none;
+		@apply pointer-events-none bg-opacity-0 shadow-none;
 	}
 
 	.hideOnBlog {
-		@apply opacity-0;
+		@apply hidden opacity-0;
 	}
 </style>
